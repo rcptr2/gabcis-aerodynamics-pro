@@ -10,6 +10,10 @@
 
 🇬🇧 *English documentation: [README.md](README.md)*
 
+![A Gabci's AeroDynamics Pro kezelőfelülete](docs/images/aerodynamics-pro-ui.png)
+
+*A folyadék-megjelenítő az öt motorszabályzó fölött, jobbra lent a túlmintavételezés-választó.*
+
 A legtöbb szaturációs plugin statikus átviteli görbével formálja a hullámalakot. Az AeroDynamics Pro
 ehelyett egydimenziós összenyomható áramlásként kezeli a jelet, és a viszkózus **Burgers-egyenlet**
 numerikus megoldásán lépteti végig — ez a legegyszerűbb parciális differenciálegyenlet, amely valódi
@@ -148,6 +152,30 @@ CHANGELOG.md     Fejlesztési előzmények fázisonként
 
 - **macOS** (Intel, x86_64) — FL Studio 2026
 - **Windows 11 x64** — FL Studio 2026
+
+## Teljesítmény
+
+![FL Studio plugin-teljesítménymérő](docs/images/performance-monitor.png)
+
+FL Studio 2026-ban mérve, Windows 11 x64 alatt, egy ASUS ZenBook 13-on, Intel
+Core i7-1065G7 processzorral — ez egy alacsony fogyasztású, négymagos laptop-CPU,
+nem munkaállomás. Mind a hét plugin egyszerre futott ugyanabban a projektben, két
+gyári Image-Line pluginnal együtt, viszonyítási alapnak. A számok az FL Studio
+sajátjai, *Reset on transport* bekapcsolva, hogy az egyszeri indulási tüskék
+kimaradjanak.
+
+| Plugin | CPU % | Time | Peak |
+|---|---:|---:|---:|
+| **Gabci's AeroDynamics Pro** | **17** | **251** | **353** |
+| FLEX Bass *(Image-Line, viszonyítás)* | 9 | 125 | 275 |
+| Gabci's MasterClear | 4 | 53 | 264 |
+| Gabci's SmartMask Network *(1. példány)* | 3 | 43 | 554 |
+| Gabci's PhaseLock Sub | 3 | 41 | 1306 |
+| Emphasizer *(Image-Line, viszonyítás)* | 2 | 34 | 117 |
+| Gabci's Acoustic Cloak | 2 | 36 | 191 |
+| Gabci's MorphicPhaser | 2 | 27 | 152 |
+| Gabci's SmartMask Network *(2. példány)* | 1 | 16 | 498 |
+| Gabci's SpectralCarve Pro | 1 | 19 | 751 |
 
 ## Licenc
 
